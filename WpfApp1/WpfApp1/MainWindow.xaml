@@ -1,0 +1,32 @@
+﻿<Window x:Class="WpfApp1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    
+    <Grid>
+        <ListView HorizontalAlignment = "Left" Height = "299" Margin = "10,10,0,0" 
+         VerticalAlignment = "Top" Width = "724" x:Name="lista">
+
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header = "Name" DisplayMemberBinding = "{Binding Name}" 
+                  Width = "100"/>
+
+                    <GridViewColumn Header = "ID" DisplayMemberBinding = "{Binding ID}" 
+                  Width = "100"/>
+
+                    <GridViewColumn Header = "Age" DisplayMemberBinding = "{Binding Age}" 
+                  Width = "100"/>
+
+                </GridView>
+            </ListView.View>
+
+        </ListView>
+        <Button Content="Click" HorizontalAlignment="Left" Margin="659,347,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="7.281,0.42" Click="btn1_Click"/>
+        <Label Content="Label" x:Name="ellabel" HorizontalAlignment="Left" Margin="155,367,0,0" VerticalAlignment="Top" Loaded="Label_Loaded"/>
+    </Grid>
+</Window>
